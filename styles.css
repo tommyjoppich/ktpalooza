@@ -14,19 +14,18 @@ body {
     color: white;
 }
 
-/* Header Styling (Ensures Full Height Background) */
 header {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center items inside */
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
     background-color: #458FFF;
     color: white;
     position: relative;
     width: 100%;
-    height: auto; /* Adjust height dynamically */
-    min-height: 120px; /* Ensures enough vertical space */
+    height: auto;
+    min-height: 120px;
     box-sizing: border-box;
 }
 
@@ -39,23 +38,20 @@ header {
     width: 100%;
 }
 
-
-/* Dark Mode Toggle (Top Right) */
 #dark-mode-toggle {
     position: absolute;
-    right: 15px; /* Padding from edge */
     top: 15px;
-    background-color: #19FF19;
+    right: 15px;
+    background-color: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px;
+    z-index: 10;
 }
 
 #dark-mode-toggle:hover {
-    background-color: #16cc16;
+    background-color: transparent;
 }
 
 /* Team Cards */
@@ -88,11 +84,14 @@ header {
 /* Team Pages */
 .team-column {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .team-column ul {
+    width: 100%;
+    max-width: 300px;
     list-style-type: none;
     padding: 0;
 }
@@ -100,9 +99,12 @@ header {
 .team-column li {
     background: #458FFF;
     color: white;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .team-column h3 {
@@ -112,18 +114,19 @@ header {
 /* Back Button (Top Left) */
 .back-button {
     position: absolute;
-    left: 15px; /* Padding from edge */
     top: 15px;
+    left: 15px;
+    /* Padding from edge */
     padding: 10px;
-    background: #19FF19;
-    color: black;
+    background-color: transparent;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .back-button:hover {
-    background: #16cc16;
+    background-color: transparent;
 }
 
 /* Centered Title */
@@ -146,3 +149,17 @@ header {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+}
+

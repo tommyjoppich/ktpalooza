@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check for saved mode in localStorage
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
-        darkModeToggle.textContent = "Light Mode";
+        darkModeToggle.textContent = "🔆";
     }
 
     // Toggle dark mode
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("dark-mode", "enabled");
-            darkModeToggle.textContent = "Light Mode";
+            darkModeToggle.textContent = "🔆";
         } else {
             localStorage.setItem("dark-mode", "disabled");
-            darkModeToggle.textContent = "Dark Mode";
+            darkModeToggle.textContent = "🌙";
         }
     });
 });
