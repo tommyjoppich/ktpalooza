@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #458FFF;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+/* Ensures items inside the header are properly spaced */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+#dark-mode-toggle:hover {
+    background-color: transparent;
+}
+
+/* Team Cards */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.team-contain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.team-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .team-card {
+    background: #222;
+}
+
+/* Team Pages */
+.team-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.team-column ul {
+    width: 100%;
+    max-width: 300px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-column li {
+    background: #458FFF;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.team-column h3 {
+    text-align: center;
+}
+
+/* Back Button (Top Left) */
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    /* Padding from edge */
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.back-button:hover {
+    background-color: transparent;
+}
+
+/* Centered Title */
+#main-title {
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/* Adjusts team title size and spacing */
+.team-title {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+/* Ensures ranking and points are centered below the team title */
+.team-subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+}
+
